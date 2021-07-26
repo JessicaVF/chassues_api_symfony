@@ -15,11 +15,13 @@ class Lacet
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"chaussuresIndex", "lacetCreate"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"chaussuresIndex", "lacetCreate"})
      */
     private $couleur;
 
