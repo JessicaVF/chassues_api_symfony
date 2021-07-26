@@ -29,7 +29,7 @@ class ChaussureController extends AbstractController
 
         $myRequest = $request->getContent();
 
-        $chaussure = $serializer->deserialize($myRequest, chaussure::class, 'json');
+        $chaussure = $serializer->deserialize($myRequest, Chaussure::class, 'json');
 
         $manager->persist($chaussure);
 
