@@ -16,10 +16,12 @@ class ChaussureController extends AbstractController
     /**
      * @Route("/chaussure", name="chaussure")
      */
-    public function index(ChaussureRepository $repository): Response
+    public function index(ChaussureRepository $repository, SerializerInterface $serializer): Response
     {
         $chaussures = $repository->findAll();
-        return $this->json($chaussures);
+//
+        return $this->json($chaussures, 200, [], ['groups' => 'chaussuresIndex']);
+
     }
     /**
      * @Route("/chaussure/create", name="create_chaussure", methods={"POST"})
